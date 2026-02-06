@@ -1,0 +1,198 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Tech Collective LLC marketing site (pink & gold) with contact form and internal inquiries view",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Build a responsive single-page marketing website with header navigation to Hero, Services, About, and Contact sections.",
+      "acceptanceCriteria": [
+        "Landing page renders without errors and is usable on mobile and desktop.",
+        "Top navigation allows jumping to Hero, Services, About, and Contact sections.",
+        "Brand name “Tech Collective LLC” is visible in the header and hero."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the main App shell that renders the marketing layout, including a responsive header with brand name “Tech Collective LLC” and anchor navigation links to #hero, #services, #about, and #contact sections."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteHeader.tsx",
+          "operation": "create",
+          "description": "Implement a responsive header with brand title and navigation links that jump to required sections; include mobile-friendly navigation behavior (e.g., collapsible menu)."
+        },
+        {
+          "path": "frontend/src/pages/MarketingPage.tsx",
+          "operation": "create",
+          "description": "Create a marketing page component that composes the Hero/Intro, Services, About, and Contact sections in the required order and ensures responsive spacing/typography."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire the MarketingPage into the app render flow so it is the default visible experience (no orphan views/components)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Add a Services section that lists exactly four services with clear English descriptions in a responsive grid/cards layout.",
+      "acceptanceCriteria": [
+        "Services section contains exactly the four services named by the user.",
+        "Each service has a short, readable description in English.",
+        "Services are presented in a clean layout (e.g., cards or a grid) and remain readable on mobile."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "create",
+          "description": "Create the Services section that renders exactly these four offerings: Notarial services; Simple phone configuration & setup; Website creation; Tech consultations, each with a short English description and a responsive grid/card layout. Use shadcn-ui Card (or equivalent shadcn-ui primitives) to standardize spacing/typography; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/MarketingPage.tsx",
+          "operation": "modify",
+          "description": "Add ServicesSection to the marketing page and ensure it is reachable via the #services anchor (and header navigation)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Apply a consistent accessible pink-and-gold theme across typography, buttons, and section styling.",
+      "acceptanceCriteria": [
+        "Primary accents use pink and gold consistently across header, buttons, and highlights.",
+        "Text contrast meets basic readability (no light text on light backgrounds).",
+        "Theme is applied consistently across all sections (no default/un-styled components)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Add/define global styles and theme CSS variables for Tailwind/shadcn-ui tokens (e.g., --background/--foreground/--primary) tuned to a pink-and-gold palette with readable contrast, plus base typography defaults."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind theme as needed to support the pink-and-gold design (e.g., custom named colors or token mapping) and ensure consistent usage across components/sections."
+        },
+        {
+          "path": "frontend/src/components/layout/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Apply consistent theme styling to header elements (links, buttons, focus states) so it matches the pink-and-gold brand and remains accessible (focus rings, contrast). Use shadcn-ui Button (or equivalent shadcn-ui primitives) where appropriate; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/pages/MarketingPage.tsx",
+          "operation": "modify",
+          "description": "Ensure all sections share consistent padding, background treatments, headings, and button styling aligned with the pink-and-gold theme (no unstyled defaults)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Add a Contact section with an inquiry form, basic validation, and a clear success confirmation state after submission.",
+      "acceptanceCriteria": [
+        "User can enter contact details, select a service of interest, and submit a message.",
+        "After submit, the UI shows a success confirmation and clears or disables the form appropriately.",
+        "Form includes basic validation (required fields and valid email format when email is provided)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/sections/ContactSection.tsx",
+          "operation": "create",
+          "description": "Create the Contact section wrapper (anchored as #contact) that contains the inquiry form and a post-submit confirmation area styled to match the site theme."
+        },
+        {
+          "path": "frontend/src/components/forms/InquiryForm.tsx",
+          "operation": "create",
+          "description": "Implement the inquiry form fields: name, email/phone (single contactInfo), service interested in (select), message; include basic client-side validation (required fields; validate email format when email is provided). Use shadcn-ui Input/Textarea/Select and Button for consistent form UI; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/hooks/useSubmitInquiry.ts",
+          "operation": "create",
+          "description": "Add a React hook that calls the backend submitInquiry capability via the actor, manages loading/error/success state, and returns helpers to clear/disable the form on success."
+        },
+        {
+          "path": "frontend/src/pages/MarketingPage.tsx",
+          "operation": "modify",
+          "description": "Wire ContactSection (and its InquiryForm) into the marketing page and ensure it is reachable via the header navigation link to #contact."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Add an internal “Inquiries” view/page in the frontend that fetches and displays stored inquiries in a readable list/table after authentication.",
+      "acceptanceCriteria": [
+        "Backend stores each inquiry with timestamp and submitted fields.",
+        "Frontend includes an “Inquiries” view/page that lists stored inquiries in a readable table/list.",
+        "Submitting a new inquiry makes it appear in the inquiries list after refresh/reload (or via refetch)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/InquiriesPage.tsx",
+          "operation": "create",
+          "description": "Create an internal Inquiries page that fetches inquiries from the backend actor and displays them in a readable table/list (name, contactInfo, serviceInterested, message). Use shadcn-ui Table (or Card/list primitives) for clean presentation; verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/hooks/useInquiries.ts",
+          "operation": "create",
+          "description": "Create a hook that fetches inquiries (getAllInquiries) via the actor with loading/error handling and a refetch mechanism after a new inquiry is submitted."
+        },
+        {
+          "path": "frontend/src/components/auth/RequireAuth.tsx",
+          "operation": "create",
+          "description": "Add a lightweight auth gate using the authorization component pattern: require Internet Identity login before showing internal data; show an access-denied/please-login state otherwise. Verify the authorization component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/auth/RequireAdmin.tsx",
+          "operation": "create",
+          "description": "Add an admin-only gate for the Inquiries view using backend role checks (e.g., isCallerAdmin/getCallerUserRole) and display an access denied state when not authorized. Verify the authorization component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/auth/LoginButton.tsx",
+          "operation": "create",
+          "description": "Add a Login/Logout button using the authorization component guidance (Internet Identity). Ensure logout clears cached app data (react-query cache) for internal views. Verify the authorization component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire navigation to the Inquiries page (e.g., a header link/button) and ensure the Inquiries page is not orphaned. Keep the public marketing content accessible without login; only gate the internal inquiries view."
+        },
+        {
+          "path": "frontend/src/components/forms/InquiryForm.tsx",
+          "operation": "modify",
+          "description": "After successful submission, trigger inquiries refetch behavior when applicable (e.g., if the internal inquiries view is open) while still showing a clear success confirmation in the contact section."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Render generated pink-and-gold brand imagery (logo, hero background, service icons sprite) from static frontend assets in header/hero/services.",
+      "acceptanceCriteria": [
+        "Generated images are placed under frontend/public/assets/generated and are referenced by the UI.",
+        "Header displays the logo and hero section uses the hero image tastefully without harming readability.",
+        "Images load correctly in production build and do not require backend calls."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/layout/SiteHeader.tsx",
+          "operation": "modify",
+          "description": "Render the static logo image from frontend/public/assets/generated/tech-collective-logo.dim_512x512.png in the header alongside the brand name, ensuring it scales well on mobile/desktop."
+        },
+        {
+          "path": "frontend/src/components/sections/HeroSection.tsx",
+          "operation": "create",
+          "description": "Create a hero/intro section (anchored as #hero) that uses the static hero background image from frontend/public/assets/generated/hero-bg.dim_1920x1080.png with an overlay/treatment to preserve text readability and meet contrast requirements."
+        },
+        {
+          "path": "frontend/src/components/sections/ServicesSection.tsx",
+          "operation": "modify",
+          "description": "Wire the service icons sprite from frontend/public/assets/generated/service-icons-sprite.dim_512x128.png into the services UI (e.g., per-service icon display) while keeping layout readable and responsive."
+        },
+        {
+          "path": "frontend/src/pages/MarketingPage.tsx",
+          "operation": "modify",
+          "description": "Include the HeroSection at the top of the marketing page and ensure both hero imagery and logo are visible in the overall layout without requiring any backend calls."
+        }
+      ]
+    }
+  ]
+}

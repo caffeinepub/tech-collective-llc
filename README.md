@@ -1,2 +1,3 @@
-# tech-collective-llc
-Exported from Caffeine project: Tech Collective LLC
+## Tech Collective LLC
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

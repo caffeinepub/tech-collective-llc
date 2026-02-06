@@ -1,0 +1,18 @@
+{
+  "frontend/src/index.css": "Global styles with pink-and-gold OKLCH color system for light and dark modes, custom animations, and design tokens.",
+  "frontend/tailwind.config.js": "Tailwind configuration extended with custom fonts (Poppins display), pink-gold color palette, custom shadows (glow effects), and fade-in animations.",
+  "frontend/src/App.tsx": "Main application component managing view state between marketing page and admin inquiries page with header and footer.",
+  "frontend/src/pages/MarketingPage.tsx": "Marketing page composing Hero, Services, About, and Contact sections in sequence.",
+  "frontend/src/pages/InquiriesPage.tsx": "Admin-only page displaying all contact inquiries in a table with authentication gate.",
+  "frontend/src/components/layout/SiteHeader.tsx": "Responsive sticky header with logo, navigation links, mobile menu, and admin login button.",
+  "frontend/src/components/layout/SiteFooter.tsx": "Footer component with copyright notice and caffeine.ai attribution with heart icon.",
+  "frontend/src/components/sections/HeroSection.tsx": "Hero section with background image overlay, gradient heading, and call-to-action buttons.",
+  "frontend/src/components/sections/ServicesSection.tsx": "Services section displaying four service cards with icons and descriptions in responsive grid.",
+  "frontend/src/components/sections/AboutSection.tsx": "About section with company description, value propositions, and why-choose-us card.",
+  "frontend/src/components/sections/ContactSection.tsx": "Contact section with inquiry form and contact information card, showing success state after submission.",
+  "frontend/src/components/forms/InquiryForm.tsx": "Contact inquiry form with validation for name, email/phone, service selection, and message fields.",
+  "frontend/src/components/auth/LoginButton.tsx": "Internet Identity login/logout button with loading states and query cache clearing.",
+  "frontend/src/components/auth/RequireAuth.tsx": "Authentication gate component requiring Internet Identity login to access protected content.",
+  "frontend/src/components/auth/RequireAdmin.tsx": "Admin authorization gate checking backend admin role before allowing access to protected pages.",
+  "frontend/src/hooks/useQueries.ts": "React Query hooks for submitting inquiries, fetching all inquiries, and checking admin status."
+}

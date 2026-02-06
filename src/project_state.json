@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Create a pink-and-gold business website for Tech Collective LLC advertising services: notarial, simple phone configuration/setup, website creation, and tech consultations.",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimalist tech-inspired logo in pink and gold on transparent background (tech-collective-logo.dim_512x512.png)\n- Abstract gradient hero background with subtle circuitry pattern in pink and gold (hero-bg.dim_1920x1080.png)\n- Set of 4 small line-style service icons in pink/gold: notary, phone setup, website creation, tech consultation (service-icons-sprite.dim_512x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-responsive-marketing-website-for-tech-collective-llc-with-clear-navigation-and-sections-for-hero-intro-services-about-and-contact",
+      "title": "Create a responsive marketing website for “Tech Collective LLC” with clear navigation and sections for: Hero/intro, Services, About, and Contact.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-services-section-that-lists-and-describes-the-currently-offered-services-notarial-services-simple-phone-configuration-setup-website-creation-tech-consultations",
+      "title": "Add a Services section that lists and describes the currently offered services: Notarial services; Simple phone configuration & setup; Website creation; Tech consultations.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-consistent-pink-and-gold-visual-theme-across-the-site-colors-typography-buttons-section-styling-ensuring-sufficient-contrast-and-accessibility",
+      "title": "Apply a consistent pink-and-gold visual theme across the site (colors, typography, buttons, section styling), ensuring sufficient contrast and accessibility.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-contact-section-with-a-simple-inquiry-form-name-email-phone-service-interested-in-message-and-a-clear-confirmation-state-after-submission",
+      "title": "Add a Contact section with a simple inquiry form (name, email/phone, service interested in, message) and a clear confirmation state after submission.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-persist-submitted-contact-inquiries-in-the-motoko-backend-and-expose-query-methods-to-retrieve-them-for-display-in-a-simple-internal-inquiries-view-page-no-external-email-integration",
+      "title": "Persist submitted contact inquiries in the Motoko backend and expose query methods to retrieve them for display in a simple internal “Inquiries” view/page (no external email integration).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-add-static-brand-imagery-logo-and-a-hero-background-illustration-in-a-cohesive-pink-and-gold-style-and-render-them-in-the-site-header-hero-from-frontend-static-assets-not-via-backend",
+      "title": "Generate and add static brand imagery (logo and a hero background/illustration) in a cohesive pink-and-gold style, and render them in the site header/hero from frontend static assets (not via backend).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Build a business website for Tech Collective LLC",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add services content/sections for: notarial, phone configuration & setup, website creation, and tech consultations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Apply a pink-and-gold visual theme to the website",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Tech Collective LLC",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

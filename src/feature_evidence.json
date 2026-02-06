@@ -1,0 +1,135 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-responsive-marketing-website-for-tech-collective-llc-with-clear-navigation-and-sections-for-hero-intro-services-about-and-contact",
+      "featureTitle": "Create a responsive marketing website for “Tech Collective LLC” with clear navigation and sections for: Hero/intro, Services, About, and Contact.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/layout/SiteHeader.tsx",
+        "frontend/src/pages/MarketingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-services-section-that-lists-and-describes-the-currently-offered-services-notarial-services-simple-phone-configuration-setup-website-creation-tech-consultations",
+      "featureTitle": "Add a Services section that lists and describes the currently offered services: Notarial services; Simple phone configuration & setup; Website creation; Tech consultations.",
+      "files": [
+        "frontend/src/components/sections/ServicesSection.tsx",
+        "frontend/src/pages/MarketingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-apply-a-consistent-pink-and-gold-visual-theme-across-the-site-colors-typography-buttons-section-styling-ensuring-sufficient-contrast-and-accessibility",
+      "featureTitle": "Apply a consistent pink-and-gold visual theme across the site (colors, typography, buttons, section styling), ensuring sufficient contrast and accessibility.",
+      "files": [
+        "frontend/src/components/layout/SiteHeader.tsx",
+        "frontend/src/index.css",
+        "frontend/src/pages/MarketingPage.tsx",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-a-contact-section-with-a-simple-inquiry-form-name-email-phone-service-interested-in-message-and-a-clear-confirmation-state-after-submission",
+      "featureTitle": "Add a Contact section with a simple inquiry form (name, email/phone, service interested in, message) and a clear confirmation state after submission.",
+      "files": [
+        "frontend/src/components/forms/InquiryForm.tsx",
+        "frontend/src/components/sections/ContactSection.tsx",
+        "frontend/src/pages/MarketingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-persist-submitted-contact-inquiries-in-the-motoko-backend-and-expose-query-methods-to-retrieve-them-for-display-in-a-simple-internal-inquiries-view-page-no-external-email-integration",
+      "featureTitle": "Persist submitted contact inquiries in the Motoko backend and expose query methods to retrieve them for display in a simple internal “Inquiries” view/page (no external email integration).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/auth/LoginButton.tsx",
+        "frontend/src/components/auth/RequireAdmin.tsx",
+        "frontend/src/components/auth/RequireAuth.tsx",
+        "frontend/src/components/forms/InquiryForm.tsx",
+        "frontend/src/pages/InquiriesPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-add-static-brand-imagery-logo-and-a-hero-background-illustration-in-a-cohesive-pink-and-gold-style-and-render-them-in-the-site-header-hero-from-frontend-static-assets-not-via-backend",
+      "featureTitle": "Generate and add static brand imagery (logo and a hero background/illustration) in a cohesive pink-and-gold style, and render them in the site header/hero from frontend static assets (not via backend).",
+      "files": [
+        "frontend/src/components/layout/SiteHeader.tsx",
+        "frontend/src/components/sections/HeroSection.tsx",
+        "frontend/src/components/sections/ServicesSection.tsx",
+        "frontend/src/pages/MarketingPage.tsx"
+      ],
+      "components": [
+        "authorization@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

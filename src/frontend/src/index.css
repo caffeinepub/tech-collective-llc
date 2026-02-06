@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.75rem;
+        /* Pink and gold theme - light mode */
+        --background: 0.98 0.01 340;
+        --foreground: 0.25 0.02 340;
+        --card: 1 0 0;
+        --card-foreground: 0.25 0.02 340;
+        --popover: 1 0 0;
+        --popover-foreground: 0.25 0.02 340;
+        /* Primary: Rich pink */
+        --primary: 0.62 0.22 350;
+        --primary-foreground: 1 0 0;
+        /* Secondary: Warm gold */
+        --secondary: 0.78 0.15 65;
+        --secondary-foreground: 0.25 0.02 340;
+        --muted: 0.96 0.01 340;
+        --muted-foreground: 0.55 0.02 340;
+        /* Accent: Lighter pink */
+        --accent: 0.88 0.12 350;
+        --accent-foreground: 0.25 0.02 340;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.90 0.02 340;
+        --input: 0.90 0.02 340;
+        --ring: 0.62 0.22 350;
+        --chart-1: 0.62 0.22 350;
+        --chart-2: 0.78 0.15 65;
+        --chart-3: 0.88 0.12 350;
+        --chart-4: 0.70 0.18 45;
+        --chart-5: 0.55 0.20 355;
+    }
+
+    .dark {
+        --background: 0.18 0.02 340;
+        --foreground: 0.95 0.01 340;
+        --card: 0.22 0.02 340;
+        --card-foreground: 0.95 0.01 340;
+        --popover: 0.22 0.02 340;
+        --popover-foreground: 0.95 0.01 340;
+        /* Primary: Bright pink for dark mode */
+        --primary: 0.75 0.25 350;
+        --primary-foreground: 0.15 0.02 340;
+        /* Secondary: Bright gold for dark mode */
+        --secondary: 0.82 0.18 65;
+        --secondary-foreground: 0.15 0.02 340;
+        --muted: 0.28 0.02 340;
+        --muted-foreground: 0.65 0.02 340;
+        --accent: 0.35 0.08 350;
+        --accent-foreground: 0.95 0.01 340;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.95 0.01 340;
+        --border: 0.32 0.03 340;
+        --input: 0.32 0.03 340;
+        --ring: 0.75 0.25 350;
+        --chart-1: 0.75 0.25 350;
+        --chart-2: 0.82 0.18 65;
+        --chart-3: 0.88 0.12 350;
+        --chart-4: 0.70 0.18 45;
+        --chart-5: 0.65 0.22 355;
+    }
+
+    * {
+        @apply border-border;
+    }
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+

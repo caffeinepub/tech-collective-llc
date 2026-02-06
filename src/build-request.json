@@ -1,0 +1,132 @@
+{
+  "kind": "build_request",
+  "title": "Tech Collective LLC pink-and-gold business website with services and contact intake",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a responsive marketing website for “Tech Collective LLC” with clear navigation and sections for: Hero/intro, Services, About, and Contact.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a business website for the tech collective llc."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Landing page renders without errors and is usable on mobile and desktop.",
+        "Top navigation allows jumping to Hero, Services, About, and Contact sections.",
+        "Brand name “Tech Collective LLC” is visible in the header and hero."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Add a Services section that lists and describes the currently offered services: Notarial services; Simple phone configuration & setup; Website creation; Tech consultations.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "My dervues currently offered are notarial and simple phone configuration and set up. Website creation and tech consultations."
+        ]
+      },
+      "acceptanceCriteria": [
+        "Services section contains exactly the four services named by the user.",
+        "Each service has a short, readable description in English.",
+        "Services are presented in a clean layout (e.g., cards or a grid) and remain readable on mobile."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Apply a consistent pink-and-gold visual theme across the site (colors, typography, buttons, section styling), ensuring sufficient contrast and accessibility.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "I want it pink and gold"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Primary accents use pink and gold consistently across header, buttons, and highlights.",
+        "Text contrast meets basic readability (no light text on light backgrounds).",
+        "Theme is applied consistently across all sections (no default/un-styled components)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add a Contact section with a simple inquiry form (name, email/phone, service interested in, message) and a clear confirmation state after submission.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "Create a business website for the tech collective llc."
+        ]
+      },
+      "acceptanceCriteria": [
+        "User can enter contact details, select a service of interest, and submit a message.",
+        "After submit, the UI shows a success confirmation and clears or disables the form appropriately.",
+        "Form includes basic validation (required fields and valid email format when email is provided)."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Persist submitted contact inquiries in the Motoko backend and expose query methods to retrieve them for display in a simple internal “Inquiries” view/page (no external email integration).",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend stores each inquiry with timestamp and submitted fields.",
+        "Frontend includes an “Inquiries” view/page that lists stored inquiries in a readable table/list.",
+        "Submitting a new inquiry makes it appear in the inquiries list after refresh/reload (or via refetch)."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Generate and add static brand imagery (logo and a hero background/illustration) in a cohesive pink-and-gold style, and render them in the site header/hero from frontend static assets (not via backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "I want it pink and gold"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are placed under frontend/public/assets/generated and are referenced by the UI.",
+        "Header displays the logo and hero section uses the hero image tastefully without harming readability.",
+        "Images load correctly in production build and do not require backend calls."
+      ]
+    }
+  ],
+  "constraints": [],
+  "nonGoals": [],
+  "imageRequirements": {
+    "required": [
+      "Minimalist tech-inspired logo in pink and gold on transparent background (tech-collective-logo.dim_512x512.png)",
+      "Abstract gradient hero background with subtle circuitry pattern in pink and gold (hero-bg.dim_1920x1080.png)",
+      "Set of 4 small line-style service icons in pink/gold: notary, phone setup, website creation, tech consultation (service-icons-sprite.dim_512x128.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

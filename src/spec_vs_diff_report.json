@@ -1,0 +1,74 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-05T18:27:17.242Z",
+  "summary": "Most core marketing-site and inquiries features appear implemented: single-page sections (Hero/Services/About/Contact) with sticky nav and smooth scrolling, pink/gold theme variables, a contact form with validation + confirmation state, and a backend/“Inquiries” admin view with persistence. One key backend data requirement (timestamp per inquiry) is not present in the diff. Several authentication/access-control and user-profile capabilities were added beyond the request.",
+  "missing_requirements": [
+    {
+      "id": "REQ-5",
+      "requirement": "Backend stores each inquiry with timestamp and submitted fields.",
+      "reason": "The Inquiry type stored in the Motoko backend includes id, name, contactInfo, serviceInterested, and message, but no timestamp field is stored or populated during submission.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "User profile system (get/save user profile) with permission checks.",
+      "reason": "BuildRequest does not ask for any user profile feature; only inquiry submission and listing are required.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Internet Identity login/logout UI and auth-gated admin access (RequireAuth/RequireAdmin) for viewing inquiries.",
+      "reason": "BuildRequest requires an internal “Inquiries” view/page but does not require adding authentication/Internet Identity or role-based access control to gate that page.",
+      "evidence": [
+        "frontend/src/components/auth/LoginButton.tsx",
+        "frontend/src/components/auth/RequireAuth.tsx",
+        "frontend/src/components/auth/RequireAdmin.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/pages/InquiriesPage.tsx"
+      ]
+    },
+    {
+      "description": "Access control initialization via secret URL parameter (caffeineAdminToken) and actor initialization hook logic.",
+      "reason": "Not requested; BuildRequest does not mention secret tokens, URL parameter-based admin bootstrap, or access control mixins.",
+      "evidence": [
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/utils/urlParams.ts",
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.78,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/auth/LoginButton.tsx",
+    "frontend/src/components/auth/RequireAdmin.tsx",
+    "frontend/src/components/auth/RequireAuth.tsx",
+    "frontend/src/components/forms/InquiryForm.tsx",
+    "frontend/src/components/layout/SiteFooter.tsx",
+    "frontend/src/components/layout/SiteHeader.tsx",
+    "frontend/src/components/sections/AboutSection.tsx",
+    "frontend/src/components/sections/ContactSection.tsx",
+    "frontend/src/components/sections/HeroSection.tsx",
+    "frontend/src/components/sections/ServicesSection.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/InquiriesPage.tsx",
+    "frontend/src/pages/MarketingPage.tsx",
+    "frontend/src/utils/urlParams.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}
